@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(viewScoreTapped))
+        
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderColor = UIColor.lightGray.cgColor
@@ -47,7 +49,9 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = "\(countries[correctAnswer].uppercased()): \(score)"
+//        title = "\(countries[correctAnswer].uppercased()): \(score)"
+        title = countries[correctAnswer].uppercased()
+        
         questionsAsked += 1
         
         if questionsAsked == 11 {
@@ -81,6 +85,14 @@ class ViewController: UIViewController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        
+        present(ac, animated: true)
+    }
+    
+    @objc func viewScoreTapped() {
+        let ac = UIAlertController(title: "Current score", message: "Your current score is: \(score)", preferredStyle: .alert)
+        
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: .none))
         
         present(ac, animated: true)
     }
