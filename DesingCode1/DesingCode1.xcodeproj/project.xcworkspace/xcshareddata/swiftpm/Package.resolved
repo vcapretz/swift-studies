@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Contentful",
+        "repositoryURL": "git@github.com:contentful/contentful.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "16afcd238b8cd4af23726b8f046db2aa366b129b",
+          "version": "5.1.1"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "2f9ef53b99a25bdfba97660c69c42cb54e323b78",
+          "version": "5.8.4"
+        }
+      },
+      {
+        "package": "SDWebImageSwiftUI",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+        "state": {
+          "branch": null,
+          "revision": "4c7f169e39bc35d6b80d42b8eb8301bee9cd0907",
+          "version": "1.5.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
